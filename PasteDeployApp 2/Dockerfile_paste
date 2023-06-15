@@ -1,0 +1,12 @@
+FROM python:3.7-buster
+
+WORKDIR /appdynamics/pyramid
+
+RUN apt-get update
+
+COPY . .
+RUN pip install -e .
+RUN pip install appdynamics
+RUN pyagent proxy start
+
+CMD pserve --reload development.ini
