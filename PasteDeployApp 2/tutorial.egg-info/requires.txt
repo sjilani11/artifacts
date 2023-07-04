@@ -1,6 +1,0 @@
-pyramid
-plaster_pastedeploy
-pyramid_jinja2
-waitress
-paste
-requests
